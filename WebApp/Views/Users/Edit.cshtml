@@ -1,0 +1,55 @@
+﻿@model WebApp.Models.Entities.User
+
+<h2>Edit User</h2>
+
+<form asp-action="Create" method="post">
+    <div class="form-group">
+        <label for="Id">Id</label>
+        <input type="text" class="form-control" id="Id" name="Id" asp-for="Id" readonly>
+    </div>
+    <div class="form-group">
+        <label for="FirstName">First Name</label>
+        <input type="text" class="form-control" id="FirstName" name="FirstName" asp-for="FirstName" placeholder="Enter your first name">
+    </div>
+    <div class="form-group">
+        <label for="LastName">Last Name</label>
+        <input type="text" class="form-control" id="LastName" name="LastName" asp-for="LastName" placeholder="Enter your last name">
+    </div>
+    <div class="form-group">
+        <label for="Email">Email</label>
+        <input type="email" class="form-control" id="Email" name="Email" asp-for="Email" placeholder="Enter your new email">
+    </div>
+    <div class="form-group">
+        <label for="Phone">Phone</label>
+        <input type="text" class="form-control" id="Phone" name="Phone" asp-for="Phone" placeholder="Enter your new phone number">
+    </div>
+    <div class="form-group">
+        <label for="Password">Password</label>
+        <input type="password" class="form-control" id="Password" name="Password" asp-for="Password" placeholder="Enter your new password">
+    </div>
+    <br />
+    <div class="row">
+        <div class="col-md-6">
+            <div>
+                <label for="ProfilePicture">Current Profile Picture</label>
+                <br />
+                <img src="@Url.Action("ProfilePicture", "Users", new { id = Model.Id })" alt="Profile Picture" height="200" />
+            </div>
+        </div>
+        <div class="col-md-6">
+            <label for="ProfilePicture">Select New Profile Picture</label>
+            <input type="file" name="formFile" class="form-control" />
+            <br />
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <br />
+            <button type="submit" class="btn btn-primary">Save Changes</button>
+        </div>
+    </div>
+
+</form>
+
+
+

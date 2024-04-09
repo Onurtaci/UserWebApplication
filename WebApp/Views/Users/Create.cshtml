@@ -1,0 +1,36 @@
+﻿@model WebApp.Models.CreateUserViewModel
+
+<h2>Register</h2>
+
+<form asp-action="Create" method="post" enctype="multipart/form-data">
+    <div class="form-group">
+        <label for="FirstName">First Name</label>
+        <input type="text" class="form-control" id="FirstName" name="FirstName" placeholder="Enter your first name">
+    </div>
+    <div class="form-group">
+        <label for="LastName">Last Name</label>
+        <input type="text" class="form-control" id="LastName" name="LastName" placeholder="Enter your last name">
+    </div>
+    <div class="form-group">
+        <label for="Email">Email</label>
+        <input type="email" class="form-control" id="Email" name="Email" placeholder="Enter your email">
+    </div>
+    <div class="form-group">
+        <label for="Phone">Phone</label>
+        <input type="text" class="form-control" id="Phone" name="Phone" placeholder="Enter your phone number">
+    </div>
+    <div class="form-group">
+        <label for="Password">Password</label>
+        <input type="password" class="form-control" id="Password" name="Password" placeholder="Enter your password">
+    </div>
+    <br />
+    <div>
+        <label for="ProfilePicture">Profile Picture</label>
+        <input type="file" name="formFile" class="form-control"/>
+    <br />
+    <div class="row">
+        <button type="submit" class="btn btn-primary">Register</button>
+    </div>
+
+</form>
+
